@@ -1,31 +1,35 @@
 Stockboy Refactoring
 
-#Install pipenv (if not already installed)
+# Install Package Management
+
+## Install pipenv (if not already installed)
 pip install pipenv
 
-#Install npm (if not already installed)
+## Install npm (if not already installed)
 brew install node
 
-#Install npx (if not already installed)
+## Install npx (if not already installed)
 npm install npx
 
-#Boot server
+# Boot server
+## Navigate to server folder
 cd server
+## Activeate pipenv
 pipenv shell
 
-#install requirements
+## installing requirements
 pipenv install -r requirements.txt
 
+## Run server
 python app.py
 
-#Install dependencies
+### How to Install Python dependencies
 pipenv install <package-name>
 
-#update requirements file
+### How to update requirements file
 pipenv lock -r > requirements.txt
 
-
-#Boot client
+# Booting the client (for the first time)
 cd client
 npm install
 npm run dev
