@@ -4,7 +4,7 @@
   export let location;
 </script>
 
-<div class="flex flex-wrap">
+<div class="flex flex-wrap pt-32">
   <div class="w-full px-4">
     <div
       class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
