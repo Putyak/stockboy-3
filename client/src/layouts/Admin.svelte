@@ -29,10 +29,11 @@
     <div class="relative md:ml-64 bg-blueGray-100">
       <AdminNavbar />
       <HeaderStats />
+      
 
       {#if location.href.indexOf('/admin/') == -1 }
       
-      <div class="pt-12 mx-6">
+      <div class="px-4 md:px-10 mx-auto w-full mt-12">
         <div class="flex flex-wrap">
           <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4">
             <CardLineChart />
@@ -49,9 +50,7 @@
       </div>
 
       {/if}
-
-      
-      <div class="px-4 md:px-10 mx-auto w-full -m-24">
+      <div class="px-4 md:px-10 mx-auto w-full mt-12">
         <Router url="admin">
           <Route path="dashboard" component="{Dashboard}" />
           <Route path="settings" component="{Settings}" />
@@ -60,5 +59,5 @@
         </Router>
         <FooterAdmin />
       </div>
-    </div>
   </div>
+</div>
