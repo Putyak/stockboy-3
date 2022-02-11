@@ -7,9 +7,8 @@
   import HeaderStats from "components/Headers/HeaderStats.svelte";
   import FooterAdmin from "components/Footers/FooterAdmin.svelte";
   import CardLineChart from "components/Cards/CardLineChart.svelte";
-  import CardBarChart from "components/Cards/CardBarChart.svelte";
-  import CardPageVisits from "components/Cards/CardPageVisits.svelte";
-  import CardSocialTraffic from "components/Cards/CardSocialTraffic.svelte";
+  import CardPieChart from "../components/Cards/CardPieChart.svelte";
+  import CardShortTable from "../components/Cards/CardShortTable.svelte";
 
 
 
@@ -18,6 +17,7 @@
   import Settings from "views/admin/Settings.svelte";
   import Tables from "views/admin/Tables.svelte";
   import Maps from "views/admin/Maps.svelte";
+  
 
   export let location;
   export let admin = "";
@@ -38,13 +38,14 @@
           <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4">
             <CardLineChart />
           </div>
+          
         </div>
         <div class="flex flex-wrap mt-4">
-          <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-            <CardPageVisits />
+          <div class="w-full xl:w-6/12 mb-12 xl:mb-0 px-4">
+            <CardShortTable />
           </div>
-          <div class="w-full xl:w-4/12 px-4">
-            <CardSocialTraffic />
+          <div class="w-full xl:w-6/12 px-4">
+            <CardPieChart />
           </div>
         </div>
       </div>

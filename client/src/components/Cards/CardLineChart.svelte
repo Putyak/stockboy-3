@@ -16,23 +16,52 @@
           "May",
           "June",
           "July",
+          "August",
+          "Steptember",
+          "October",
+          "November",
+          "December",
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "Steptember",
+          "October",
+          "November",
+          "December",
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "Steptember",
+          "October",
+          "November",
+          "December",
         ],
         datasets: [
           {
-            label: new Date().getFullYear(),
+            label: 'Sales',
             type: 'line',
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [65, 78, 66, 44, 56, 67, 75],
-            fill: false
+            backgroundColor: "rgba(59,148,104,0.4)",
+            borderColor: "rgba(59,148,104,0.8)",
+            data: [65, 78, 66, 44, 56, 67, 75, 65, 78, 66, 44, 56, 67, 75, 65, 78, 66, 44, 56, 67, 75, 65, 78, 66, 44, 56, 67, 75, 65, 78, 66, 44, 56, 67, 75, 65, 78, 66, 44, ],
+            fill: true,
+            
 
           },
           {
-            label: new Date().getFullYear() - 1,
+            label: 'Quantity Sold',
             fill: false,
-            backgroundColor: "#fff",
-            borderColor: "#fff",
-            data: [50, 68, 86, 74, 56, 60, 87],
+            backgroundColor: "rgba(143,208,252,0.2)",
+            data: [50, 68, 86, 74, 56, 60, 87,50, 68, 86, 74, 56, 60, 87,50, 68, 86, 74, 56, 60, 87,50, 68, 86, 74, 56, 60, 87,50, 68, 86, 74, 56, 60, 87],
             type:'bar',
             
           }
@@ -41,6 +70,11 @@
       options: {
         maintainAspectRatio: false,
         responsive: true,
+        elements: {
+          line: {
+            tension: .3,
+          },
+        },
         title: {
           display: false,
           text: "Sales Charts",
@@ -98,7 +132,7 @@
               scaleLabel: {
                 display: false,
                 labelString: "Value",
-                fontColor: "white",
+                fontColor: "black",
               },
               gridLines: {
                 
@@ -121,7 +155,7 @@
 </script>
 
 <div
-  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700"
+  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-800"
 >
   <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
     <div class="flex flex-wrap items-center">
@@ -130,7 +164,7 @@
           Overview
         </h6>
         <h2 class="text-white text-xl font-semibold">
-          Sales value
+          Sales, Quantity Sold & FBA Transfer
         </h2>
       </div>
     </div>
