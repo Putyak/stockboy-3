@@ -4,7 +4,7 @@
 </script>
 
 <!-- Header -->
-<div class="relative bg-blueGray-800 md:pt-32 pb-16 pt-12">
+<div class="relative bg-blueGray-800 pt-8 pb-16">
   <div class="px-4 md:px-10 mx-auto w-full">
     <div>
       <!-- Card stats -->
@@ -47,8 +47,8 @@
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
           <CardStats
-            statSubtitle="Burn"
-            statTitle="49,65%"
+            statSubtitle="Avg. Burn Rate"
+            statTitle="38.2"
             statArrow="up"
             statPercent="12"
             statPercentColor="text-emerald-500"

@@ -1,12 +1,13 @@
 <script>
   import { Router, Route } from "svelte-routing";
+  
 
   // components for this layout
   import AdminNavbar from "components/Navbars/AdminNavbar.svelte";
   import Sidebar from "components/Sidebar/Sidebar.svelte";
   import HeaderStats from "components/Headers/HeaderStats.svelte";
   import FooterAdmin from "components/Footers/FooterAdmin.svelte";
-  import CardLineChart from "components/Cards/CardLineChart.svelte";
+  import CardDashboardChart from "components/Cards/CardDashboardChart.svelte";
   import CardPieChart from "../components/Cards/CardPieChart.svelte";
   import CardShortTable from "../components/Cards/CardShortTable.svelte";
 
@@ -17,6 +18,7 @@
   import Settings from "views/admin/Settings.svelte";
   import Tables from "views/admin/Tables.svelte";
   import Maps from "views/admin/Maps.svelte";
+  import HeaderDatepicker from "../components/Headers/HeaderDatepicker.svelte";
   
 
   export let location;
@@ -28,6 +30,7 @@
     <Sidebar location={location}/>
     <div class="relative md:ml-64 bg-blueGray-100">
       <AdminNavbar />
+      <HeaderDatepicker />
       <HeaderStats />
       
 
@@ -36,7 +39,7 @@
       <div class="px-4 md:px-10 mx-auto w-full mt-12">
         <div class="flex flex-wrap">
           <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4">
-            <CardLineChart />
+            <CardDashboardChart />
           </div>
           
         </div>

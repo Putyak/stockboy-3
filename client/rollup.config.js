@@ -3,6 +3,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
+import css from 'rollup-plugin-css-only';
+
 // library that helps you import in svelte with
 // absolute paths, instead of
 // import Component  from "../../../../components/Component.svelte";
@@ -23,25 +25,7 @@ const aliases = alias({
   ],
 });
 
-const indexTemplate = `<!--
-
-=========================================================
-* Notus Svelte - v1.1.0 based on Tailwind Starter Kit by Creative Tim
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/notus-svelte
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/notus-svelte/blob/main/LICENSE.md)
-
-* Tailwind Starter Kit Page: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
--->
+const indexTemplate = `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,7 +34,7 @@ const indexTemplate = `<!--
 
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon.png" />
-    <link rel="stylesheet" href="/build/bundle.css" />
+    <link rel="stylesheet" href="/build/vendor.css" />
     <link
       rel="stylesheet"
       href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
@@ -153,16 +137,19 @@ export default {
     file: "public/build/bundle.js",
   },
   plugins: [
+    css({ output: 'vendor.css' }),
     svelte({
       // enable run-time checks when not in production
       dev: !production,
+      emitCss: true,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: (css) => {
-        css.write("bundle.css");
-      },
+      
+     // css: (css) => {
+     //   css.write("bundle.css");
+     // },
     }),
-
+    
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration -
