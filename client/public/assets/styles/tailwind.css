@@ -1995,10 +1995,6 @@ select {
   flex-shrink: 1;
 }
 
-.order-last {
-  order: 9999;
-}
-
 .float-right {
   float: right;
 }
@@ -2765,6 +2761,10 @@ select {
 
 .pl-3 {
   padding-left: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pr-4 {

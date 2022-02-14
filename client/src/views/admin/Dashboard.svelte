@@ -2,7 +2,7 @@
   // core components
   import CardLineChart from "components/Cards/CardLineChart.svelte";
   import CardPageVisits from "components/Cards/CardDatatable.svelte";
-  import CardGridjs from "../../components/Cards/CardGridjs.svelte";
+  import CardSimpleDatatable from "../../components/Cards/CardSimpleDatatable.svelte";
   export let location;
 </script>
 
@@ -14,8 +14,7 @@
   </div>
   <div class="flex flex-wrap mt-4">
     <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4">
-      <CardGridjs />
-      <CardPageVisits />
+      <CardSimpleDatatable />
     </div>
   </div>
 </div>

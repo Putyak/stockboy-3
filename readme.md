@@ -14,7 +14,7 @@ npm install npx
 # Boot server
 ## Navigate to server folder
 cd server
-## Activeate pipenv
+## Activate pipenv
 pipenv shell
 
 ## installing requirements
