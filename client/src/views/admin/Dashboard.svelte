@@ -1,7 +1,6 @@
 <script>
   // core components
   import CardLineChart from "components/Cards/CardLineChart.svelte";
-  import CardPageVisits from "components/Cards/CardDatatable.svelte";
   import CardSimpleDatatable from "../../components/Cards/CardSimpleDatatable.svelte";
   export let location;
 </script>
