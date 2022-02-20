@@ -1,4 +1,9 @@
 /node_modules/
 /public/build/
 
+!/node_modules/svelte-simple-datatables/src/Datatable.svelte
+!/node_modules/svelte-simple-datatables/src/components/SearchInputHTML.svelte
+!/node_modules/svelte-csv/src/CSVDownloader.svelte
+
 .DS_Store
+/
