@@ -37,9 +37,9 @@
           </div>
 
           <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-            <CSVDownloader 
+            <CSVDownloader class="hover:bg-purple-600"
                 data= {data} filename={'stockboy-report.csv'} bom={true}
-                >CSV <i class="fas fa-download"></i>
+                >CSV <i class="fas fa-download py-2"></i>
             </CSVDownloader>
 
           </div>
