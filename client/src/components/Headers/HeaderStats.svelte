@@ -4,57 +4,57 @@
 </script>
 
 <!-- Header -->
-<div class="relative bg-red-500 md:pt-32 pb-32 pt-12">
+<div class="relative bg-blueGray-800 pt-8 pb-16">
   <div class="px-4 md:px-10 mx-auto w-full">
     <div>
       <!-- Card stats -->
       <div class="flex flex-wrap">
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
           <CardStats
-            statSubtitle="TRAFFIC"
-            statTitle="350,897"
+            statSubtitle="Gross Sales"
+            statTitle="$50,897"
             statArrow="up"
             statPercent="3.48"
             statPercentColor="text-emerald-500"
-            statDescripiron="Since last month"
+            statDescripiron="Since last /x/ days"
             statIconName="far fa-chart-bar"
-            statIconColor="bg-red-500"
+            statIconColor="bg-emerald-500"
           />
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
           <CardStats
-            statSubtitle="NEW USERS"
-            statTitle="2,356"
+            statSubtitle="Shipping Charged"
+            statTitle="$2,356"
             statArrow="down"
             statPercent="3.48"
             statPercentColor="text-red-500"
-            statDescripiron="Since last week"
-            statIconName="fas fa-chart-pie"
-            statIconColor="bg-orange-500"
+            statDescripiron="Since last /x/ days"
+            statIconName="fas fa-truck"
+            statIconColor="bg-teal-500"
           />
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
           <CardStats
-            statSubtitle="SALES"
-            statTitle="924"
+            statSubtitle="Discounts"
+            statTitle="-$924"
             statArrow="down"
             statPercent="1.10"
             statPercentColor="text-orange-500"
-            statDescripiron="Since yesterday"
-            statIconName="fas fa-users"
-            statIconColor="bg-pink-500"
+            statDescripiron="Since last /x/ days"
+            statIconName="fas fa-percent"
+            statIconColor="bg-orange-300"
           />
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
           <CardStats
-            statSubtitle="PERFORMANCE"
-            statTitle="49,65%"
+            statSubtitle="Avg. Burn Rate"
+            statTitle="38.2"
             statArrow="up"
             statPercent="12"
             statPercentColor="text-emerald-500"
-            statDescripiron="Since last month"
-            statIconName="fas fa-percent"
-            statIconColor="bg-emerald-500"
+            statDescripiron="Since last /x/ days"
+            statIconName="fas fa-fire"
+            statIconColor="bg-red-600"
           />
         </div>
       </div>
