@@ -47,14 +47,13 @@ const indexTemplate = `
         var process = { env: {<<process-env-status>>} };
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script defer src="<<live-preview-link>>/build/bundle.js"></script>
   </head>
 
   <body class="text-blueGray-700 antialiased">
     <noscript>
       <strong
-        >We're sorry but notus-svelte doesn't work properly without
+        >We're sorry but stockboy doesn't work properly without
         JavaScript enabled. Please enable it to continue.</strong
       >
     </noscript>
@@ -68,19 +67,19 @@ if (production) {
     "./public/index.html",
     indexTemplate
       .replace("<<process-env-status>>", "PRODUCTION: true")
-      .replace(/<<live-preview-link>>/g, "/notus-svelte")
+      .replace(/<<live-preview-link>>/g, "")
   );
   fs.writeFileSync(
     "./public/200.html",
     indexTemplate
       .replace("<<process-env-status>>", "PRODUCTION: true")
-      .replace(/<<live-preview-link>>/g, "/notus-svelte")
+      .replace(/<<live-preview-link>>/g, "")
   );
   fs.writeFileSync(
     "./public/404.html",
     indexTemplate
       .replace("<<process-env-status>>", "PRODUCTION: true")
-      .replace(/<<live-preview-link>>/g, "/notus-svelte")
+      .replace(/<<live-preview-link>>/g, "")
   );
 } else {
   fs.writeFileSync(
