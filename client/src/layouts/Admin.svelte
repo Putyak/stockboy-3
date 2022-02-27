@@ -23,6 +23,21 @@
 
   export let location;
   export let admin = "";
+
+
+  let orders_by_day = getOrdersbyDay();
+    
+
+  async function getOrdersbyDay() {
+      return await fetch('http://127.0.0.1:5555/sales/by-order')
+          .then((response) => response.json())
+          .then((data) => {
+              return data;
+      
+        });
+  }
+
+
 </script>
 
 
@@ -39,7 +54,11 @@
       <div class="px-4 md:px-10 mx-auto w-full mt-12">
         <div class="flex flex-wrap">
           <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4">
-            <CardDashboardChart />
+            {#await orders_by_day}
+            <p>loading</p>
+            {:then dashboard_chart}
+              <CardDashboardChart orders_by_day={dashboard_chart}/>
+            {/await}
           </div>
           
         </div>
