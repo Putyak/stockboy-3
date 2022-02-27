@@ -20,19 +20,19 @@
 
     let rows
 
-    //let sales_by_sku = fetch('http://127.0.0.1:5555/sales/by-sku')
-     //   .then(Response => Response.json());
-     //   return Response.json();
-        //.then(Response => (data = Response));
-
+    let sales_by_sku = getSalesbySKU();
     
-    //let data = getData();
-	let sales_by_sku = (async () => {
-		let response = await fetch('http://127.0.0.1:5555/sales/by-sku')
-    return await response.json()
-	})()
+    async function getSalesbySKU() {
+        return await fetch('http://127.0.0.1:5555/sales/by-sku')
+            .then((response) => response.json())
+            .then((data) => {
+                return data;
+        
+         });
+    }
+    
+    console.log(sales_by_sku)
 
-    //console.log(sales_by_sku);
 </script>
 
 
@@ -56,69 +56,69 @@
 
           </div>
         </div>
+       
+        {#await getSalesbySKU()}
+            <p>waiting</p>
+        {:then data}
 
-    {#await sales_by_sku }
-        <p> loading</p>
-    
-    {:then} 
-        
-   
-    <Datatable {settings} {sales_by_sku} bind:dataRows={sales_by_sku} classList="w-full">
-        <thead class="mt-6 w-full">
-            <th data-key="sku"
-                class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                sku
-                <i class="fas fa-sort"></i>
-            </th>
-            <th data-key="name"
-                class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Name
-                <i class="fas fa-sort"></i>
-            </th>
-            <th data-key="qty"
-                class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Qty Sold
-                <i class="fas fa-sort"></i>
-            </th>
-            <th data-key="sales"
-                class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Sales
-                <i class="fas fa-sort"></i>
-            </th>
-            <th data-key="sales"
-                 class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Inventory
-                <i class="fas fa-sort"></i>
-            </th>
-            <th data-key="burn"
-                class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Burn
-                <i class="fas fa-sort"></i>
-            </th>
-        </thead>
-        <tbody>
-
-        {#if rows}
-            {#each $rows as row}
             
-            <tr>
-                <td class="border-t-0 px-6 align-middle text-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                    <strong class="text-center">{row.sku}</strong> {#if row.img != "None"}<img src="{row.img}" width=100px class="pt-2 rounded mx-auto text-center"> {:else}<br/><i class="fas fa-image fa-4x"></i> {/if}</td>
-                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4">
-                    {row.name}</td>
-                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
-                    {row.qty}</td>
-                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
-                    ${row.sales}</td>
-                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
- </td>
-                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
-                    {row.burn}</td>
-            </tr>
-            {/each}
-        {/if}
-        </tbody>
-    </Datatable>
-    {/await}
+        <Datatable {settings} {data} bind:dataRows={rows} classList="w-full">
+            <thead class="mt-6 w-full">
+                <th data-key="sku"
+                    class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    sku
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th data-key="name"
+                    class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Name
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th data-key="qty"
+                    class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Qty Sold
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th data-key="sales"
+                    class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Sales
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th data-key="sales"
+                    class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Inventory
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th data-key="burn"
+                    class="px-6 sortable bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                    Burn
+                    <i class="fas fa-sort"></i>
+                </th>
+            </thead>
+            <tbody>
+
+                {#if rows}
+                    {#each $rows as row}
+                    
+                    <tr>
+                        <td class="border-t-0 px-6 align-middle text-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            <strong class="text-center">{row.sku}</strong> {#if row.img != "None"}<img src="{row.img}" width=100px class="pt-2 rounded mx-auto text-center"> {:else}<br/><i class="fas fa-image fa-4x"></i> {/if}</td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4">
+                            {row.name}</td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
+                            {row.qty}</td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
+                            ${row.sales}</td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-nowrap p-4">
+                            {row.burn}</td>
+                    </tr>
+                    {/each}
+                {/if}
+            
+            </tbody>
+        </Datatable>
+        {/await}
 </div>
 </div>
