@@ -29,7 +29,7 @@
     
 
   async function getOrdersbyDay() {
-      return await fetch('http://127.0.0.1:5555/sales/by-order')
+      return await fetch('http://137.184.139.204:5555/sales/by-order')
           .then((response) => response.json())
           .then((data) => {
               return data;
