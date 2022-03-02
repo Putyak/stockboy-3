@@ -17,6 +17,7 @@
   import Dashboard from "views/admin/Dashboard.svelte";
   import Settings from "views/admin/Settings.svelte";
   import Tables from "views/admin/Tables.svelte";
+  import Orders from "views/admin/Orders.svelte";
   import Maps from "views/admin/Maps.svelte";
   import HeaderDatepicker from "../components/Headers/HeaderDatepicker.svelte";
   
@@ -29,7 +30,7 @@
     
 
   async function getOrdersbyDay() {
-      return await fetch('http://137.184.139.204:5555/sales/by-order')
+      return await fetch('http://137.184.139.204/sales/by-order')
           .then((response) => response.json())
           .then((data) => {
               return data;
@@ -76,9 +77,10 @@
       <div class="px-4 md:px-10 mx-auto w-full mt-12">
         <Router url="admin">
           <Route path="dashboard" component="{Dashboard}" />
+          <Route path="orders" component="{Orders}" />
+          <Route path="maps" component="{Maps}" />
           <Route path="settings" component="{Settings}" />
           <Route path="tables" component="{Tables}" />
-          <Route path="maps" component="{Maps}" />
         </Router>
         <FooterAdmin />
       </div>

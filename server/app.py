@@ -89,10 +89,32 @@ def SalesByOrder():
     return jsonify(result)
 
 
+@app.route("/orders", methods=['GET'])
+def GetOrders():
+    @ after_this_request
+    def add_header(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
 
+    import dummy
 
+    return jsonify(dummy.orders)
 
+@app.route("/orders/by-day", methods=['GET'])
+def GetOrdersByDay():
+    @ after_this_request
+    def add_header(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
 
+    import dummy
+
+    result = {
+        'labels': dummy.orders_lables,
+        'data': dummy.orders_by_day
+    }
+
+    return jsonify(result)
 
 if __name__ == "__main__":
     app.run(host="localhost",debug=True, port=5555)

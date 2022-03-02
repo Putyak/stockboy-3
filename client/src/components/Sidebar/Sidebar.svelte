@@ -172,11 +172,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/maps"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/maps') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/admin/orders"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/orders') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-receipt mr-2 text-sm {location.href.indexOf('/admin/maps') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-receipt mr-2 text-sm {location.href.indexOf('/admin/orders') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Orders
           </a>

@@ -1,6 +1,6 @@
 <script>
   // core components
-  import MapExample from "components/Maps/MapExample.svelte";
+  import Table from "components/Cards/CardTable-Repeatable.svelte";
   export let location;
 </script>
 
@@ -9,7 +9,8 @@
     <div
       class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
     >
-      <MapExample />
+    adsf
+      <Table />
     </div>
   </div>
 </div>
