@@ -3,6 +3,8 @@
   import CardLineChart from "components/Cards/CardLineChart.svelte";
   import CardSimpleDatatable from "../../components/Cards/CardSimpleDatatable.svelte";
   export let location;
+
+  
 </script>
 
 <div>

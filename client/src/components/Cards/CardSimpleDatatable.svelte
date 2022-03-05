@@ -24,7 +24,7 @@
     let sales_by_sku = getSalesbySKU();
     
     async function getSalesbySKU() {
-        return await fetch('http://137.184.139.204:5555/sales/by-sku')
+        return await fetch('http://137.184.139.204/sales/by-sku')
             .then((response) => response.json())
             .then((data) => {
                 return data;

@@ -20,7 +20,7 @@
 
   let rand = -1;
   function getRand() {
-    fetch("http://localhost:5555/rand")
+    fetch("http://137.184.139.204/rand")
       .then(d => d.text())
       .then(d => (rand = d));
       console.log(rand);

@@ -17,7 +17,7 @@
 
 <Router url="{url}">
   <!-- admin layout -->
-  <Route path="admin/*admin" component="{Admin}" />
+  <Route path="dashboard/*admin" component="{Admin}" />
   <!-- auth layout -->
   <Route path="auth/*auth" component="{Auth}" />
   <!-- no layout pages -->

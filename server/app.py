@@ -89,10 +89,54 @@ def SalesByOrder():
     return jsonify(result)
 
 
+@app.route("/orders", methods=['GET'])
+def GetOrders():
+    @ after_this_request
+    def add_header(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
+    """
+        # Return a list of Orders, within date range
+        # Also provide method to Get a single order by id
+    """
+    import dummy
+
+    return jsonify(dummy.orders)
+
+@app.route("/orders/by-day", methods=['GET'])
+def GetOrdersByDay():
+    @ after_this_request
+    def add_header(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
+    """
+        # Return chart data - list of days in range as labels
+        # and count of orders per day
+    """
+
+    import dummy
+
+    result = {
+        'labels': dummy.orders_lables,
+        'data': dummy.orders_by_day
+    }
+
+    return jsonify(result)
 
 
 
+@app.route("/customers", methods=['GET'])
+def GetCustomers():
+    @ after_this_request
+    def add_header(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
+    """
+        # Return table data - list of customers and summed order value
+        # Number of orders and "customer value"
+    """
 
+    import dummy
 
 if __name__ == "__main__":
     app.run(host="localhost",debug=True, port=5555)

@@ -1398,9 +1398,9 @@ select {
   background-color: rgba(15, 23, 42, var(--tw-bg-opacity));
 }
 
-.hover\:bg-purple-300:hover {
+.hover\:bg-purple-400:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(216, 180, 254, var(--tw-bg-opacity));
+  background-color: rgba(192, 132, 252, var(--tw-bg-opacity));
 }
 
 .hover\:bg-purple-600:hover {
@@ -3204,6 +3204,11 @@ select {
 .text-emerald-500 {
   --tw-text-opacity: 1;
   color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+.text-emerald-700 {
+  --tw-text-opacity: 1;
+  color: rgba(4, 120, 87, var(--tw-text-opacity));
 }
 
 .text-orange-500 {
