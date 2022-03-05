@@ -15,7 +15,7 @@
         labels: labels,
         datasets: [
           {
-            label: new Date().getFullYear(),
+            label: "Orders",
             backgroundColor: "rgba(85,182,133,.7)",
             borderColor: "rgba(85,182,133,.7)",
             data: data,
@@ -41,6 +41,7 @@
           intersect: true,
         },
         legend: {
+          text: "Orders",
           labels: {
             fontColor: "white",
           },

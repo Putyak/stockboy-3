@@ -109,11 +109,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/') == -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/dashboard/') == -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-tv mr-2 text-sm {location.href.indexOf('/admin/') == -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-tv mr-2 text-sm {location.href.indexOf('/dashboard/') == -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Dashboard
           </a>
@@ -132,12 +132,12 @@
       <ul class="md:flex-col md:min-w-full flex flex-col list-none">
         <li class="items-center">
           <a
-            use:link
-            href="/admin/dashboard"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/dashboard') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+          use:link
+          href="/dashboard/sales"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/dashboard/sales') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-chart-area mr-2 text-sm {location.href.indexOf('/dashboard') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-chart-area mr-2 text-sm {location.href.indexOf('/dashboard/sales') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Overview
           </a>
@@ -146,11 +146,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/settings"
-            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/admin/settings') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/cogs"
+            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/dashboard/cogs') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-cogs mr-2 text-sm {location.href.indexOf('/admin/settings') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-cogs mr-2 text-sm {location.href.indexOf('/dashboard/cogs') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             COGs
           </a>
@@ -159,11 +159,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/tables"
-            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/admin/tables') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/channels"
+            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/dashboard/channels') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-chart-bar mr-2 text-sm {location.href.indexOf('/admin/tables') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-chart-bar mr-2 text-sm {location.href.indexOf('/dashboard/channels') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Channels
           </a>
@@ -172,11 +172,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/orders"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/orders') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/orders"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/dashboard/orders') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-receipt mr-2 text-sm {location.href.indexOf('/admin/orders') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-receipt mr-2 text-sm {location.href.indexOf('/dashboard/orders') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Orders
           </a>
@@ -197,11 +197,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/dashboard"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/dashboard') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/products"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/dashboard/products') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-shopping-bag mr-2 text-sm {location.href.indexOf('/admin/dashboard') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-shopping-bag mr-2 text-sm {location.href.indexOf('/dashboard/products') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Overview
           </a>
@@ -210,11 +210,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/settings"
-            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/admin/settings') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/inventory"
+            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/dashboard/inventory') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-archive mr-2 text-sm {location.href.indexOf('/admin/settings') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-archive mr-2 text-sm {location.href.indexOf('/dashboard/inventory') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Inventory
           </a>
@@ -222,11 +222,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/settings"
-            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/admin/settings') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/shipments"
+            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/dashboard/shipments') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-truck mr-2 text-sm {location.href.indexOf('/admin/settings') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-truck mr-2 text-sm {location.href.indexOf('/dashboard/shipments') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Shipments
           </a>
@@ -234,11 +234,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/tables"
-            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/admin/tables') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/fba"
+            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/dashboard/fba') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fab fa-amazon mr-2 text-sm {location.href.indexOf('/admin/tables') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fab fa-amazon mr-2 text-sm {location.href.indexOf('/dashboard/fba') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             FBA
           </a>
@@ -259,11 +259,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/dashboard"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/dashboard') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/customers"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/dashboard/customers') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-users mr-2 text-sm {location.href.indexOf('/admin/dashboard') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-users mr-2 text-sm {location.href.indexOf('/dashboard/customers') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Customers
           </a>
@@ -272,11 +272,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/settings"
-            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/admin/settings') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
+            href="/dashboard/suppliers"
+            class="text-xs uppercase py-3 font-bold block  {location.href.indexOf('/dashboard/suppliers') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-lightBlue-600'}"
           >
             <i
-              class="fas fa-parachute-box mr-2 text-sm {location.href.indexOf('/admin/settings') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
+              class="fas fa-parachute-box mr-2 text-sm {location.href.indexOf('/dashboard/suppliers') !== -1 ? 'opacity-75' : 'text-blueGray-700'}"
             ></i>
             Suppliers
           </a>
