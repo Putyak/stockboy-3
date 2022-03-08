@@ -49,7 +49,7 @@ import Admin from "../../layouts/Admin.svelte";
     'discounts': {
       'title': "Discounts",
       'icon': "fas fa-percent",
-      'icon_bg': "bg-orange-300",
+      'icon_bg': "bg-red-300",
       'prefix': "-$",
     },
     'burn': {
@@ -58,7 +58,96 @@ import Admin from "../../layouts/Admin.svelte";
       'icon_bg': "bg-red-600",
       'prefix': "",
     },
-
+    'qty': {
+      'title': "Quantity Sold",
+      'icon': "fas fa-abacus",
+      'icon_bg': "bg-orange-300",
+      'prefix': "",
+    },
+    'orders': {
+      'title': "Total Orders",
+      'icon': "fas fa-cash-register",
+      'icon_bg': "bg-orange-300",
+      'prefix': "",
+    },
+    'cancelled': {
+      'title': "Cancelled Orders",
+      'icon': "fas fa-cash-register",
+      'icon_bg': "bg-orange-300",
+      'prefix': "",
+    },
+    'cogs': {
+      'title': "Cost of Goods Sold",
+      'icon': "fas fa-reciept",
+      'icon_bg': "bg-amber-200",
+      'prefix': "",
+    },
+    'profit': {
+      'title': "Gross Profit",
+      'icon': "fas fa-file-invoice-dollar",
+      'icon_bg': "bg-emerald-900",
+      'prefix': "",
+    },
+    'unique_products': {
+      'title': "Unique Products Sold",
+      'icon': "fas fa-shapes",
+      'icon_bg': "bg-orange-300",
+      'prefix': "",
+    },
+    'avg_order_qty': {
+      'title': "Avg Order Qty",
+      'icon': "fas fa-cart-shopping",
+      'icon_bg': "bg-BlueGrey-300",
+      'prefix': "",
+    },   
+    'avg_order_value': {
+      'title': "Unique Customers",
+      'icon': "fas fa-user",
+      'icon_bg': "bg-teal-700",
+      'prefix': "",
+    },
+    'total_inventory': {
+      'title': "Total Inventory",
+      'icon': "fas fa-boxes-stacked",
+      'icon_bg': "bg-Amber-800",
+      'prefix': "",
+    },   
+    'inventory_value': {
+      'title': "Inventory Value",
+      'icon': "fas fa-hand-holding-dollar",
+      'icon_bg': "bg-teal-600",
+      'prefix': "$",
+    },
+    'inventory_days': {
+      'title': "Inventory Days",
+      'icon': "fas fa-calendar-days",
+      'icon_bg': "bg-indego-500",
+      'prefix': "",
+    },   
+    'inventory_days': {
+      'title': "Inventory Days",
+      'icon': "fas fa-calendar-days",
+      'icon_bg': "bg-indego-500",
+      'prefix': "",
+    },
+    'cost_per_day': {
+      'title': "Cost Per Day",
+      'icon': "fas fa-chart-pie",
+      'icon_bg': "bg-red-500",
+      'prefix': "",
+    },
+    'unique_customers': {
+      'title': "Unique Customers",
+      'icon': "fas fa-user",
+      'icon_bg': "bg-pink-500",
+      'prefix': "",
+    },
+    'repeat_customers': {
+      'title': "Repeat Customers",
+      'icon': "fas fa-user",
+      'icon_bg': "bg-pink-500",
+      'prefix': "",
+    },
   }
 
 

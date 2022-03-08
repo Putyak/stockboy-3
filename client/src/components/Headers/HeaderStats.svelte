@@ -1,6 +1,10 @@
 <script>
   // core components
   import CardStats from "components/Cards/CardStats.svelte";
+  
+  
+  export let card_data
+
 </script>
 
 <!-- Header -->
