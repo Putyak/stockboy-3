@@ -1,7 +1,7 @@
 <script>
   // core components
   import Table from "components/Cards/CardTable-Repeatable.svelte";
-  import BarChart from "components/Cards/CardBarChart.svelte";
+  import BarChart from "components/Charts/BarChart.svelte";
   export let location;
 
   let orders_by_day = getOrdersbyDay();
@@ -15,6 +15,14 @@
         });
   }
 
+
+  let meta = {
+    'data_label': 'Orders',
+    'title': 'Orders Chart',
+    'legend': 'Orders',
+
+  }
+
 </script>
 
 
@@ -24,7 +32,7 @@
     {#await orders_by_day}
     <p>loading</p>
     {:then orders}
-      <BarChart labels={orders.labels} data={orders.data}/>
+      <BarChart labels={orders.labels} data={orders.data} meta={meta}/>
       {/await}
   </div>
   <div class="w-full px-4">
