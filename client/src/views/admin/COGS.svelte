@@ -1,11 +1,79 @@
 <script>
   // core components
   import CardLineChart from "components/Cards/CardLineChart.svelte";
-  import CardSimpleDatatable from "../../components/Cards/CardSimpleDatatable.svelte";
-  export let location;
+  import DataTable from "components/Tables/DataTable.svelte";
+
+  import CardStat from "components/Headers/CardStat.svelte";
+  import HeaderDatepicker from "components/Headers/HeaderDatepicker.svelte";
+
+
+  let sales_by_sku = getSalesbySKU();
+
+  async function getSalesbySKU() {
+      return await fetch('http://127.0.0.1:5555/sales/by-sku')
+          .then((response) => response.json())
+          .then((data) => {
+              return data;
+      
+        });
+  }
+
+
+
+  /// Replace with Stats Requests
+  let card_stats = [
+    {'name': "sales",
+    'value':  "50,897",},
+    {'name': "shipping",
+    'value':  "2,356",},
+    {'name': "discounts",
+    'value':  "924",},
+    {'name': "burn",
+    'value':  "38.2",},
+  ]
+
+
+  let range_days = 30;
+
+  /// Chart Constants
+  const chart_meta = {
+    'data_label': 'Orders',
+    'title': 'Sales Chart',
+    'legend': 'Sales',
+    'subtitle': range_days.toString() + " days"
+  
+
+  }
+  /// Table Constants
+
+  const table_meta = {
+    header: ["SKU", "Name", "QTY Sold", "Sales", "Burn"],
+    title: "Sales",
+    keys: ['sku','name','qty','sales', 'burn'],
+  }
+  
 
   
 </script>
+
+
+<HeaderDatepicker />
+
+<!-- Header Stats -->
+<div class="relative bg-blueGray-800 pt-8 pb-16 mb-8">
+  <div class="px-4 md:px-10 mx-auto w-full ">
+    <div>
+      <!-- Card stats -->
+      <div class="flex flex-wrap">
+        {#each card_stats as stat}
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+          <CardStat stat_name={stat['name']} value={stat['value']} />
+        </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+</div>
 
 <div>
   <div class="flex flex-wrap">
@@ -15,7 +83,12 @@
   </div>
   <div class="flex flex-wrap mt-4">
     <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4">
-      <CardSimpleDatatable />
+      {#await getSalesbySKU()}
+        <p>LOADING. . . </p>
+
+        {:then table_data}
+        <DataTable response={table_data} meta={table_meta}  />
+      {/await}
     </div>
   </div>
 </div>
