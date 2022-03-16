@@ -28,7 +28,7 @@ def SalesBySku():
         return response
 
     """
-    # Return a list of Order Items, within date range, merged Alias onto SKU
+    # Return a list of Order Items, within date range, merged Alias onto SKUU
     expected_result = {
         [ 
             {"sku": "636836014104",
