@@ -1,7 +1,15 @@
 from flask import Flask, request, jsonify, after_this_request
 import random
+from flask_sqlalchemy import SQLAlchemy
+from models import db
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://vjcxksze:HuOcfAoP0gghFtlVU_y5xSeprRJ-2RIp@arjuna.db.elephantsql.com/vjcxksze"
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db.app = app
+db.init_app(app)
+
 
 @app.route("/rand", methods=['GET'])
 def hello():
@@ -12,15 +20,13 @@ def hello():
     return str(random.randint(0, 100))
 
 
-
-
 @app.route("/sales/by-sku", methods=['GET'])
 def SalesBySku():
     @ after_this_request
     def add_header(response):
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
-    
+
     """
     # Return a list of Order Items, within date range, merged Alias onto SKU
     expected_result = {
@@ -71,12 +77,11 @@ def SalesByOrder():
 
     """
 
-
     import dummy
 
     result = {
-        "total_sales":sum(dummy.sales_by_day),
-        "shipping":2356,
+        "total_sales": sum(dummy.sales_by_day),
+        "shipping": 2356,
         "discounts": -924,
         "total_qty": sum(dummy.qty_by_day),
         "burn": 38.2,
@@ -84,8 +89,8 @@ def SalesByOrder():
         "sales_by_day": dummy.sales_by_day,
         "qty_by_day": dummy.qty_by_day,
         "transfer_by_day": dummy.transfer_by_day,
-    }    
-    
+    }
+
     return jsonify(result)
 
 
@@ -102,6 +107,7 @@ def GetOrders():
     import dummy
 
     return jsonify(dummy.orders)
+
 
 @app.route("/orders/by-day", methods=['GET'])
 def GetOrdersByDay():
@@ -124,7 +130,6 @@ def GetOrdersByDay():
     return jsonify(result)
 
 
-
 @app.route("/customers", methods=['GET'])
 def GetCustomers():
     @ after_this_request
@@ -138,5 +143,7 @@ def GetCustomers():
 
     import dummy
 
+
 if __name__ == "__main__":
-    app.run(host="localhost",debug=True, port=5555)
+    db.create_all()
+    app.run(host="localhost", debug=True, port=5555)
